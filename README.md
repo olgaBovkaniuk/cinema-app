@@ -38,7 +38,7 @@ changeLogFile: src/main/resources/changelog.xml
 mvn clean install
 ```
 
-### 1.5 Run spring boot app
+### 1.4 Run spring boot app
 ```
 cd cinema-web-app 
 mvn spring-boot:run
