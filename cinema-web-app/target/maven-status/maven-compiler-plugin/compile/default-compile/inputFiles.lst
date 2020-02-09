@@ -1,0 +1,11 @@
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/converter/FilmDomainToDtoConverter.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/CinemaWebApp.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/domain/Director.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/util/DateValidator.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/service/QueryParamValidator.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/repository/CinemaRepository.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/controller/CinemaController.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/domain/Film.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/dto/FilmDto.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/controller/QueryParam.java
+/Users/mr_nikolasmirnov/projects/cinema/cinema-web-app/src/main/java/com/gmail/olgabovkaniuk/service/CinemaService.java
