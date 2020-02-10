@@ -5,7 +5,7 @@ import com.gmail.olgabovkaniuk.converter.FilmDomainToDtoConverter;
 import com.gmail.olgabovkaniuk.domain.Director;
 import com.gmail.olgabovkaniuk.domain.Film;
 import com.gmail.olgabovkaniuk.dto.FilmDto;
-import com.gmail.olgabovkaniuk.repository.CinemaRepository;
+import com.gmail.olgabovkaniuk.repository.CinemaRepositoryImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,13 +22,13 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CinemaServiceTest {
+public class CinemaServiceImplTest {
 
     @InjectMocks
-    CinemaService cinemaService;
+    CinemaServiceImpl cinemaServiceImpl;
 
     @Mock
-    CinemaRepository cinemaRepository;
+    CinemaRepositoryImpl cinemaRepositoryImpl;
 
     @Mock(answer = Answers.CALLS_REAL_METHODS)
     FilmDomainToDtoConverter filmDomainToDtoConverter;
@@ -66,14 +66,14 @@ public class CinemaServiceTest {
         filmList.add(film2);
         filmList.add(film3);
 
-        when(cinemaRepository.getFilms(null, null, null)).thenReturn(filmList);
+        when(cinemaRepositoryImpl.getFilms(null, null, null)).thenReturn(filmList);
 
         //when
-        List<FilmDto> filmDtoList = cinemaService.getFilmInfo(new QueryParam());
+        List<FilmDto> filmDtoList = cinemaServiceImpl.getFilmInfo(new QueryParam());
 
         //then
         assertEquals(3, filmDtoList.size());
-        verify(cinemaRepository, times(1)).getFilms(null, null, null);
+        verify(cinemaRepositoryImpl, times(1)).getFilms(null, null, null);
     }
 
     @Test
@@ -87,10 +87,10 @@ public class CinemaServiceTest {
         director.setBirthDate(Date.valueOf("1975-10-15"));
         director.setFilmList(filmList);
 
-        when(cinemaRepository.findDirectorById(1L)).thenReturn(director);
+        when(cinemaRepositoryImpl.findDirectorById(1L)).thenReturn(director);
 
         //when
-        boolean directorWithIdExist = cinemaService.isDirectorWithIdExist(1L);
+        boolean directorWithIdExist = cinemaServiceImpl.isDirectorWithIdExist(1L);
 
         //then
         Assert.assertTrue(directorWithIdExist);

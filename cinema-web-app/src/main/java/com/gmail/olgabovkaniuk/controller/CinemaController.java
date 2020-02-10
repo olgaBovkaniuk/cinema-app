@@ -1,7 +1,7 @@
 package com.gmail.olgabovkaniuk.controller;
 
 import com.gmail.olgabovkaniuk.dto.FilmDto;
-import com.gmail.olgabovkaniuk.service.CinemaService;
+import com.gmail.olgabovkaniuk.service.CinemaServiceImpl;
 import com.gmail.olgabovkaniuk.service.QueryParamValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ import java.util.List;
 public class CinemaController {
 
     @Autowired
-    CinemaService cinemaService;
+    CinemaServiceImpl cinemaServiceImpl;
 
     @Autowired
     QueryParamValidator queryParamValidator;
@@ -37,7 +37,7 @@ public class CinemaController {
         if (bindingResult.hasErrors()) {
             return "cinemainformation";
         }
-        List<FilmDto> filmDtoList = cinemaService.getFilmInfo(queryParam);
+        List<FilmDto> filmDtoList = cinemaServiceImpl.getFilmInfo(queryParam);
         model.addAttribute("film_list", filmDtoList);
         return "overviewpage";
     }

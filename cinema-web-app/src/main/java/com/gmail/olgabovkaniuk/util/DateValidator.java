@@ -1,6 +1,6 @@
 package com.gmail.olgabovkaniuk.util;
 
-import com.gmail.olgabovkaniuk.service.CinemaService;
+import com.gmail.olgabovkaniuk.service.CinemaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +12,11 @@ public class DateValidator {
     private static Logger log = Logger.getLogger("DateValidator");
 
     @Autowired
-    CinemaService cinemaService;
+    CinemaServiceImpl cinemaServiceImpl;
 
     public boolean isValid(final String date) {
         try {
-            cinemaService.convertToTimestamp(date);
+            cinemaServiceImpl.convertToTimestamp(date);
         } catch (Exception e) {
             log.severe(e.getMessage());
             return false;

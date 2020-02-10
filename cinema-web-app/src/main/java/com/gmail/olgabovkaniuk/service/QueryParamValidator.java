@@ -11,7 +11,7 @@ import org.springframework.validation.Validator;
 public class QueryParamValidator implements Validator {
 
     @Autowired
-    CinemaService cinemaService;
+    CinemaServiceImpl cinemaServiceImpl;
 
     @Autowired
     DateValidator dateValidator;
@@ -37,7 +37,7 @@ public class QueryParamValidator implements Validator {
             }
         }
         if (queryParam.getDirectorId() != null) {
-            if (!cinemaService.isDirectorWithIdExist(queryParam.getDirectorId())) {
+            if (!cinemaServiceImpl.isDirectorWithIdExist(queryParam.getDirectorId())) {
                 errors.rejectValue("directorId", "field.required",
                         "Director with ID: " + queryParam.getDirectorId() + " does not exist!");
             }
