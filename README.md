@@ -30,8 +30,9 @@ requred properties (by default is):
 url: jdbc:postgresql://localhost:5432/cinema
 username: postgres
 password: 1234
-changeLogFile: src/main/resources/changelog.xml
 ```
+NOTE: Create database `cinema` before running clean install:
+CREATE DATABASE cinema;
 
 ### 1.3 Go to project parent dir ( `cinema` ) and execute command
 ```
